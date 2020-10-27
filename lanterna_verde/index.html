@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanterna Verde</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="circle">
+        <div class="circle-lanterna">
+            <div class="circle-lanterna-flash" id="flash"></div>
+        </div>
+    </div>
+    <button onclick="light()">light</button>
+</body>
+<script>
+    function light() {
+        var flash = document.getElementById("flash")
+        flash.classList.toggle('active')
+    }
+</script>
+</html>

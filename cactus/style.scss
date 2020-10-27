@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f7b209;
+}
+.cactus {
+    height: 200px;
+    width: 50px;
+    background: green;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    box-shadow: inset 10px 0px 3px 0px rgba(0, 0, 0, 0.38);
+    &-left {
+        height: 25px;
+        width: 40px;
+        background: green;
+        position: absolute;
+        top: 150px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        right: 50px;
+        box-shadow: inset 10px 0px 3px 0px rgba(0, 0, 0, 0.38);
+        &::after {
+            content: '';
+            height: 90px;
+            width: 25px;
+            background: green;
+            position: absolute;
+            bottom: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: inset 10px 0px 3px 0px rgba(0,0,0,0.38);
+        }
+    }
+    &-right {
+        height: 25px;
+        width: 50px;
+        background: green;
+        position: absolute;
+        top: 75px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        left: 50px;
+
+        &::after {
+            content: '';
+            height: 50px;
+            width: 25px;
+            background: green;
+            position: absolute;
+            bottom: 15px;
+            right: 0px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+}
+.base {
+    height: 125px;
+    width: 150px;
+    background: #720707;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    position: relative;
+    box-shadow: inset 10px 0px 3px 0px rgba(0, 0, 0, 0.38);
+    &::before {
+        content: '';
+        height: 25px;
+        width: 180px;
+        background: #a10f0f;
+        position: absolute;
+        top: 0;
+        left: -15px;
+        border-radius: 25px;
+        box-shadow: inset 10px 0px 3px 0px rgba(0, 0, 0, 0.38);
+    }
+}
+.table {
+    height: 15px;
+    width: 225px;
+    background: #362016;
+    border-radius: 25px;
+    position: relative;
+    &::after {
+        content: '';
+        height: 60px;
+        width: 10px;
+        background: #362016;
+        position: absolute;
+        left: 10px;
+        transform: rotate(25deg);
+        border-radius: 25px;
+    }
+    &::before {
+        content: '';
+        height: 60px;
+        width: 10px;
+        background: #362016;
+        position: absolute;
+        right: 10px;
+        transform: rotate(-25deg);
+        border-radius: 25px;
+    }
+}

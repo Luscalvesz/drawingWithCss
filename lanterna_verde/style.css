@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: green;
+}
+
+.circle {
+  height: 420px;
+  width: 420px;
+  background: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle-lanterna {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: green;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.circle-lanterna::after {
+  content: '';
+  height: 50px;
+  width: 250px;
+  background: green;
+  position: absolute;
+  top: -40px;
+}
+
+.circle-lanterna::before {
+  content: '';
+  height: 50px;
+  width: 250px;
+  background: green;
+  position: absolute;
+  bottom: -40px;
+}
+
+.circle-lanterna-flash {
+  height: 150px;
+  width: 150px;
+  background: white;
+  border-radius: 50%;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+button {
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding: 2.5px 10px;
+  background: green;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 15px;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+button:hover {
+  color: green;
+  background: white;
+}
+
+.active {
+  -webkit-box-shadow: 0px 0px 50px 10px white;
+          box-shadow: 0px 0px 50px 10px white;
+}
+/*# sourceMappingURL=style.css.map */
