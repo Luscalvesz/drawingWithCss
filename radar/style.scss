@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #201e3e;
+}
+
+.radar {
+  height: 280px;
+  width: 280px;
+  background: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-bottom: 8px solid black;
+  border-left: 3px solid black;
+
+  &-circle {
+    background: black;
+    border: 3px solid green;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      background: transparent;
+      border: 3px solid green;
+      height: 175px;
+      width: 175px;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    &::before {
+      content: '';
+      background: transparent;
+      border: 3px solid green;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    &-lines {
+      height: 250px;
+      width: 3px;
+      background: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: '';
+        width: 250px;
+        height: 3px;
+        background: green;
+        position: absolute;
+        transform: rotate(-30deg);
+      }
+
+      &::before {
+        content: '';
+        width: 250px;
+        height: 3px;
+        background: green;
+        position: absolute;
+        transform: rotate(30deg);
+      }
+
+      &-light {
+        height: 250px;
+        width: 3px;
+        background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        position: absolute;
+        animation: turn 4s linear infinite;
+
+        &::after {
+          content: '';
+          height: 125px;
+          width: 125px;
+          background: red;
+          border-radius: 0 135px 0px 0px;
+          background: linear-gradient(151deg, red -155%, rgba(255, 255, 255, 0) 100%);
+          position: absolute;
+        }
+      }
+    }
+
+    &-missile {
+      background-image: url(./missile.svg);
+      background-size: cover;
+      height: 40px;
+      width: 20px;
+      position: absolute;
+      z-index: 1;
+      transform: rotate(165deg);
+      animation: flash 4s infinite, move 20s infinite;
+    }
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move {
+  from {
+    top: 5px;
+    left: 90px;
+  }
+
+  to {
+    top: 85px;
+    left: 110px;
+  }
+}
+
+@keyframes turn {
+  to {
+    transform: rotate(0);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}

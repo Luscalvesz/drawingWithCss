@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #9d9999;
+}
+
+.knife {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.knife::after {
+  content: '';
+  height: 25px;
+  width: 50px;
+  background: #53342e;
+  bottom: -31px;
+  position: absolute;
+  border: 5px solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: inset -8px 8px #3c2622;
+          box-shadow: inset -8px 8px #3c2622;
+}
+
+.knife-grip {
+  height: 100px;
+  width: 50px;
+  background: #9f5521;
+  -webkit-box-shadow: inset -9px 0px #7c3e21;
+          box-shadow: inset -9px 0px #7c3e21;
+  border: 5px solid black;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.knife-grip-lines {
+  width: 70px;
+  height: 8px;
+  background: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 70px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.knife-grip-lines::after {
+  content: '';
+  width: 70px;
+  height: 8px;
+  background: black;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 45px;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+  right: 12px;
+}
+
+.knife-grip-lines::before {
+  content: '';
+  width: 70px;
+  height: 8px;
+  background: black;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.knife-blade {
+  height: 200px;
+  width: 60px;
+  background: #7a7a7a;
+  border: 5px solid;
+  border-radius: 0 100% 0 0;
+  -webkit-box-shadow: inset -14px 0px #c2bebe, inset -20px 0 black;
+          box-shadow: inset -14px 0px #c2bebe, inset -20px 0 black;
+}
+/*# sourceMappingURL=style.css.map */

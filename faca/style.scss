@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #9d9999
+}
+
+.knife {
+  transform: rotate(45deg);
+  &::after{
+    content: '';
+    height: 25px;
+    width: 50px;
+    background: #53342e;
+    bottom: -31px;
+    position: absolute;
+    border: 5px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: inset -8px 8px #3c2622;
+  }
+  &-grip {
+    height: 100px;
+    width: 50px;
+    background: #9f5521;
+    box-shadow: inset -9px 0px #7c3e21;
+    border: 5px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-lines {
+      width: 70px;
+      height: 8px;
+      background: black;
+      border-radius: 20px;
+      position: absolute;
+      top: 70px;
+      transform: rotate(15deg);
+
+      &::after {
+        content: '';
+        width: 70px;
+        height: 8px;
+        background: black;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 45px;
+        transform: rotate(-4deg);
+        right: 12px;
+      }
+
+      &::before {
+        content: '';
+        width: 70px;
+        height: 8px;
+        background: black;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
+        transform: rotate(-25deg);
+      }
+    }
+  }
+
+  &-blade {
+    height: 200px;
+    width: 60px;
+    background: #7a7a7a;
+    border: 5px solid;
+    border-radius: 0 100% 0 0;
+    box-shadow: inset -14px 0px #c2bebe, inset -20px 0 black;
+  }
+}
