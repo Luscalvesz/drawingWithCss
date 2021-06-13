@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$size: 7px !default;
+
+$colors: (
+  'x': transparent,
+  'a' : black,
+  'b' : #C4C4C4,
+  'c' : #9C9C9C,
+  'd' : #363636,
+  'e' : #636363,
+  'f' : #F44336
+);
+
+$matrix:(
+  (x x x x x x x x x x x x x x x x x x x x a a a a x )
+  (x x x x x x x x x x x x x x x x x x x x a d d a a x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x a a a x)
+  (x x x x x x x x x x x x x x x x x x x x a d d d a a x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x a a d a x)
+  (x x x x x x x x x x x x x x x x x x x x a d d d d a a x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x a a d d a x)
+  (x x x x x x x x x x x x x x x x x x x x a d d d d d a a x x x x x x x x x a a a a a a a a a a a a a a a a a a a a a x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x a a d d d a x)
+  (x x x x x x x x x x x x x x x x x x x x a d d d d d d a a x x x x x x x a a c c c c c c c c c c c c c c c c c c c a a a a a x a a a x a a a x a a a x a a a x a a a x a a a x a a a a a a a a a a a a a a a x)
+  (x x x x x x x x x x x x x x x x x x x a a a a a a a a a a a a a a a a a a c c c c c c c c c c c c c c c c c c c c c c c c a a a c a a a c a a a c a a a c a a a c a a a c a a a c c c c c c c c c c c c b a x)
+  (x x x x x x x x x x x x x x x x x x a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x x x x x x x x x x x a a c c a a a a a a a a a a a a a c c d d c c d d c c c a a a a a a a a a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x x x x x x x x x x a a c c a a d d d d d d d d d d d a c c d d c c d d c c c a e c c b b b b e a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x x a a a x x x x a a c c c a d d d d a a d d d d d a a c d d c c d d c c c c a e c c c c c b b e a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x a a d d a x x a a c c c c a d d d a d d a d d d a a c c d d c c d d c c c c a e c c c c c c c c e a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x a d d d a a a a c c c c c a a d d a d d a d d a a a c d d c c d d c c c c c c a e e e e e e e e e e a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b a x)
+  (x x x x x x x a d d d d a a c c c c c c c a a d d a a d d a a d d a d d c c d d c c c c c c a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a c c c c c c c c c c c b a x)
+  (x x x x x x x a d d d d d a c c c c c c c d a a d d d d a a a d f d a c c d d c c c c c c c a e e c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b a c c c c c c c c c c b b a x)
+  (x x x x x x x a a d d d a a c c c c c c c d d a a a a a a d d a d d d a c d d c c c c c c c a a e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e b b b b a c c c c c c c c c b b a a x)
+  (x x x x x x x x a a d d a c c c c c c c d d c c d d c c d d c c a a a a d d c c c c c c c c c a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a c c c c c c c c b b a a x)
+  (x x x x x x x x x a a a a c c c c c c c d d c c d d c c d d c c d d c c d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b b b b b a c c c c c c c b b a a x)
+  (x x x x x x x x x x a a c c c c c c c d d c c d d c c d d c c d d c c d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b b b b a c c c c c c b b a a x)
+  (x x x x x x x x x x a a c c c c c c c d d c c d d c c d d c c d d c c d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b b b a c c c c c b b a a x)
+  (x x x x x x x x x a a c c c c c c c d d c c d d c c d d c c d d c c d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b b a c c c c b b a a x)
+  (x x x x x x x x a a c c c c c c c c d d c c d d c c d d c c d d c c d d c c c c c c c c c c c c c a a a a a a a a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b a c c c b b a a x)
+  (x x x x a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a c c c c c c c a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b a a x)
+  (x a a a a c c c c c c c c c c c c c c c a d d d d d a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b a a a a a a x)
+  (a a c c c c c c c c c c c c c c c c c c a d d d d d a c a a a a a c c c c c c c c c c c c c c c c c c c a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c b b b a a x)
+  (a a c c c c c c c c c c c c c c c c c a a d d d d d a c a c c c a a a a a c c c a a a a a a a c c c c a b b a c c c c a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a x)
+  (x a a a a a a a a c c c c c c c c c c a d d d d d d a c a e e e e e e e a c c a a e a x x x a a c c a b e e b a c c a a x)
+  (x x x x x x x x a a a c c c c c c c a a d d d d d d a c a a a a a a a a a c a a e e a x x x x a a c c a b b a c c a a x)
+  (x x x x x x x x x x a a a c c c c c a d d d d d d d a c c c c c c c c c c a a a e e a x x x x x a a c c a a c c a a x)
+  (x x x x x x x x x x x x a a c c c a a d d d d d d d a a a a a a a a c c a a x a a e a a x x x x x a a c c c c a a x)
+  (x x x x x x x x x x x x x a a c c a d d d d d d d d d d d d d d d a c c a x x x a e e a x x x x x x a a c c a a x)
+  (x x x x x x x x x x x x x x a c a a d d d d d d d d d d d d d d d a c c a x x x a a e a a x x x x x x a c c a x)
+  (x x x x x x x x x x x x x x a c a d d d d d d d d d d d d d d d d a c c a x x x x a e e a x x x x x x a c c a x)
+  (x x x x x x x x x x x x x x a a a d d d d d d d d d d d d d d d d a c c a a x x x a a e a a x x x x x a c c a x)
+  (x x x x x x x x x x x x x x a a d d d d d d d d d d d d d d d d d a c c c a a x x x a e e a x x x x x a c c a x)
+  (x x x x x x x x x x x x x x a a d d d d d d d d d d d d d d d d a a c c c c a a x x a a a a x x x x x a c c a x)
+  (x x x x x x x x x x x x x x a d d d d d d d d d d d d d d d d d a c c c c c c a a x x x x x x x x x a a c c a x)
+  (x x x x x x x x x x x x x a a d d d d d d d d d d d d d d d d d a c c c c c c c a a a a a a a a a a a c c a a x)
+  (x x x x x x x x x x x x x a d d d d d d d d d d d d d d d d d d a c c c c c c c c c c c c c c c c c c c a a x)
+  (x x x x x x x x x x x x a a d d d d d d d d d d d d d d d d d d a c c c c c a a a a a a a a a a a a a a a x)
+  (x x x x x x x x x x x x a d d d d d d d d d d d d d d d d d d d a c c c c a a x)
+  (x x x x x x x x x x x a a d d d d d d d d d d d d d d d d d d d a c c c c a x)
+  (x x x x x x x x x x x a d d d d d d d d d d d d d d d d d d d a a c c c a a x)
+  (x x x x x x x x x x a a d d d d d d d d d d d d d d d d d d d a c c c c a x)
+  (x x x x x x x x x x a d d d d d d d d d d d d d d d d d d d d a c c c c a x)
+  (x x x x x x x x x a a d d d d d d d d d d d d d d d d d d d d a c c c c a x)
+  (x x x x x x x x x a d d d d d d d d d d d d d d d d d d d d d a c c c a a x)
+  (x x x x x x x x x a d d d d d d d d d d d d d d d d d d d d d a c c c a x)
+  (x x x x x x x x a a d d d d d d d d d d d d d d d d d d d d d a c c c a x)
+  (x x x x x x x x a d d d d d d d d d d d d d d d d d d d d d a a c c c a x)
+  (x x x x x x x x a d d d d d d d d d d d d d d d d d d d d d a c c c c a x)
+  (x x x x x x x a a d d d d d d d d d d d d d d d d d d d d d a c c c c a x x)
+  (x x x x x x x a d d d d d d d d d d d d d d d d d d d d d d a c c c c a a x)
+  (x x x x x x x a d d d d d d d d d d d d d d d d d d d d d d a c c c c c a x)
+  (x x x x x x x a d d d d d d d d d d d d d d d d d d d d d d a c c c c c a x)
+  (x x x x x x x a a d d d d d d d d d d d d d d d d d d d d d a c c c c c a a x)
+  (x x x x x x x x a a a a a a a a a a a a a a a a a a a a a a a c c c c c c a a x)
+  (x x x x x x x x a a c c c c c c c c c c c c c c c c c c c c c c c c c c c c a x)
+  (x x x x x x x x x a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a x)
+);
+
+@function pixelize( $matrix, $size ){
+  
+  $shadow: '';
+  $rows: length($matrix);
+  
+  @for $row from 1 through $rows{
+    $row-num: nth($matrix, $row);
+    
+    @for $col from 1 through length( $row-num ){
+      $dot: nth( $row-num, $col );
+      
+      $shadow: $shadow + ( $size * $col )+' '+( $size * $row )+' '+map-get( $colors, $dot);
+
+      @if not ( $col == length( $row-num ) and $row == $rows ){
+        $shadow: $shadow +',';
+      }
+    }
+  }
+  
+  @return unquote( $shadow );
+}
+
+body{
+  background: #203e26;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.deagle{
+  width: $size * length( $matrix );
+  height: $size * length( $matrix );
+  position:relative;
+  right: 10%;
+  
+  &::after{
+    width: $size;
+    height: $size;
+    content: '';
+    position: absolute;
+    box-shadow: pixelize( $matrix, $size );
+  }
+}
